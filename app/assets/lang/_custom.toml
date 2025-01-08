@@ -1,13 +1,10 @@
 # Custom Language File for Launcher Customizer
 
 [ejs.app]
-title = "Helios Launcher"
+title = "Kevlar Launcher"
 
 [ejs.landing]
-mediaGitHubURL = "https://github.com/dscalzi/HeliosLauncher"
-mediaTwitterURL = "#"
-mediaInstagramURL = "#"
-mediaYouTubeURL = "#"
+mediaWebsiteURL = "https://github.com/dscalzi/HeliosLauncher"
 mediaDiscordURL = "https://discord.gg/zNWUXdt"
 
 [ejs.settings]
