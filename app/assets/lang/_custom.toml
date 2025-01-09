@@ -4,12 +4,12 @@
 title = "Kevlar Launcher"
 
 [ejs.landing]
-mediaWebsiteURL = "https://github.com/dscalzi/HeliosLauncher"
-mediaDiscordURL = "https://discord.gg/zNWUXdt"
+mediaWebsiteURL = "https://github.com/Tpyk-Mahn/KevlarLauncher"
+mediaDiscordURL = "https://discord.gg/DfPJJFhSNm"
 
 [ejs.settings]
-sourceGithubLink = "https://github.com/dscalZi/HeliosLauncher"
-supportLink = "https://github.com/dscalZi/HeliosLauncher/issues"
+sourceGithubLink = "https://github.com/Tpyk-Mahn/KevlarLauncher"
+supportLink = "https://github.com/Tpyk-Mahn/KevlarLauncher/issues"
 
 [ejs.welcome]
 welcomeHeader = "WELCOME TO WESTEROSCRAFT"

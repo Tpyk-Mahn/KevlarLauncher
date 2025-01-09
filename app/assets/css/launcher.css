@@ -2482,6 +2482,7 @@ input:checked + .toggleSwitchSlider:before {
 #landingContainer > #lower {
     height: 23%;
     display: flex;
+    justify-content: center;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 #landingContainer > #lower > #left {
@@ -2522,325 +2523,6 @@ input:checked + .toggleSwitchSlider:before {
     height: 100%;
     width: 33vw;
     display: inline-flex;
-}
-
-/*******************************************************************************
- *                                                                             *
- * Landing View (News Styles)                                                  *
- *                                                                             *
- ******************************************************************************/
-
-/* Main container. */
-#newsContainer {
-    position: absolute;
-    top: 100%;
-    height: 100%;
-    width: 100%;
-    transition: top 2s ease;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-/* News content container. */
-#newsContent {
-    height: 82vh;
-    width: 100%;
-    display: flex;
-    -webkit-user-select: initial;
-    position: relative;
-}
-
-/* Drop shadow displayed when content is scrolled out of view. */
-#newsContent:before {
-    content: '';
-    background: linear-gradient(rgba(0, 0, 0, 0.25), transparent);
-    width: 100%;
-    height: 5px;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.25s ease;
-}
-#newsContent[scrolled]:before {
-    opacity: 1;
-}
-
-/* News article status container (left). */
-#newsStatusContainer {
-    width: calc(30% - 60px);
-    height: calc(100% - 30px);
-    padding: 15px 15px 15px 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-}
-
-/* News status content. */
-#newsStatusContent {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-/* News title wrapper. */
-#newsTitleContainer {
-    display: flex;
-    max-width: 90%;
-}
-
-/* News article title styles. */
-#newsArticleTitle {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Avenir Medium';
-    color: white;
-    text-decoration: none;
-    transition: 0.25s ease;
-    outline: none;
-    text-align: right;
-}
-#newsArticleTitle:hover,
-#newsArticleTitle:focus {
-    text-shadow: 0px 0px 20px white;
-}
-#newsArticleTitle:active {
-    color: #c7c7c7;
-    text-shadow: 0px 0px 20px #c7c7c7;
-}
-
-/* News meta container. */
-#newsMetaContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Date and author wrappers. */
-#newsArticleDateWrapper,
-#newsArticleAuthorWrapper {
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* Date and author shared styles. */
-#newsArticleDate,
-#newsArticleAuthor {
-    display: inline-block;
-    font-size: 10px;
-    padding: 0px 5px;
-    font-weight: bold;
-    border-radius: 2px;
-}
-
-/* Date styles. */
-#newsArticleDate {
-    background: white;
-    color: black;
-    margin-top: 5px;
-}
-
-/* Author styles. */
-#newsArticleAuthor {
-    background: #a02d2a;
-}
-
-/* News article comments styles. */
-#newsArticleComments {
-    margin-top: 5px;
-    display: inline-block;
-    font-size: 10px;
-    color: #ffffff;
-    text-decoration: none;
-    transition: 0.25s ease;
-    outline: none;
-    text-align: right;
-}
-#newsArticleComments:focus,
-#newsArticleComments:hover {
-    color: #e0e0e0;
-}
-#newsArticleComments:active {
-    color: #c7c7c7;
-}
-
-/* Article content container (right). */
-#newsArticleContainer {
-    width: calc(100% - 25px);
-    height: 100%;
-    margin: 0px 0px 0px 25px;
-}
-
-/* Article content styles. */
-#newsArticleContentScrollable {
-    font-size: 12px;
-    overflow-y: scroll;
-    height: 100%;
-    padding: 0px 15px 0px 15px;
-}
-#newsArticleContentScrollable img,
-#newsArticleContentScrollable iframe {
-    max-width: 95%;
-    display: block;
-    margin: 0 auto;
-}
-#newsArticleContentScrollable a {
-    color: rgba(202, 202, 202, 0.75);
-    transition: 0.25s ease;
-    outline: none;
-}
-#newsArticleContentScrollable a:hover,
-#newsArticleContentScrollable a:focus {
-    color: rgba(255, 255, 255, 0.75);
-}
-#newsArticleContentScrollable a:active {
-    color: rgba(165, 165, 165, 0.75);
-}
-#newsArticleContentScrollable::-webkit-scrollbar {
-    width: 2px;
-}
-#newsArticleContentScrollable::-webkit-scrollbar-track {
-    display: none;
-}
-#newsArticleContentScrollable::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.50);
-}
-.bbCodeSpoilerButton {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.25s ease;
-    width: 100%;
-    border-bottom: 1px solid white;
-    padding-bottom: 15px;
-}
-.bbCodeSpoilerButton:hover,
-.bbCodeSpoilerButton:focus {
-    text-shadow: 0px 0px 20px #ffffff, 0px 0px 20px #ffffff, 0px 0px 20px #ffffff;
-}
-.bbCodeSpoilerButton:active {
-    color: #c7c7c7;
-    text-shadow: 0px 0px 20px #c7c7c7, 0px 0px 20px #c7c7c7, 0px 0px 20px #c7c7c7;
-}
-.bbCodeSpoilerText {
-    display: none;
-    padding: 15px 0px;
-    border-bottom: 1px solid white;
-}
-
-
-#newsArticleContentWrapper {
-    width: 80%;
-}
-
-.newsArticleSpacerTop {
-    height: 15px;
-}
-
-/* Div to add spacing at the end of a news article. */
-.newsArticleSpacerBot {
-    height: 30px;
-}
-
-/* News navigation container. */
-#newsNavigationContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    -webkit-user-select: none;
-    position: absolute;
-    bottom: 15px;
-    right: 0px;
-}
-
-/* Navigation status span. */
-#newsNavigationStatus {
-    font-size: 12px;
-    margin: 0px 15px;
-}
-
-/* Left and right navigation button styles. */
-#newsNavigateLeft,
-#newsNavigateRight {
-    background: none;
-    border: none;
-    outline: none;
-    height: 20px;
-    cursor: pointer;
-}
-#newsNavigateLeft:hover #newsNavigationLeftSVG,
-#newsNavigateLeft:focus #newsNavigationLeftSVG,
-#newsNavigateRight:hover #newsNavigationRightSVG,
-#newsNavigateRight:focus #newsNavigationRightSVG {
-    -webkit-filter: drop-shadow(0px 0px 2px #fff);
-}
-#newsNavigateLeft:active #newsNavigationLeftSVG .arrowLine,
-#newsNavigateRight:active #newsNavigationRightSVG .arrowLine {
-    stroke: #c7c7c7;
-}
-#newsNavigateLeft:active #newsNavigationLeftSVG,
-#newsNavigateRight:active #newsNavigationRightSVG {
-    -webkit-filter: drop-shadow(0px 0px 2px #c7c7c7);
-}
-#newsNavigateLeft:disabled #newsNavigationLeftSVG .arrowLine,
-#newsNavigateRight:disabled #newsNavigationRightSVG .arrowLine {
-    stroke: rgba(255, 255, 255, 0.75);
-}
-#newsNavigationLeftSVG {
-    transform: rotate(-90deg);
-    width: 15px;
-}
-#newsNavigationRightSVG {
-    transform: rotate(90deg);
-    width: 15px;
-}
-
-/* News error (message) container. */
-#newsErrorContainer {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-#newsErrorFailed {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* News error content (message). */
-.newsErrorContent {
-    font-size: 20px;
-}
-#newsErrorLoading {
-    display: flex;
-    width: 168.92px;
-}
-#nELoadSpan {
-    white-space: pre;
-}
-/* News error retry button styles. */
-#newsErrorRetry {
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    background: none;
-    border: none;
-    outline: none;
-    transition: 0.25s ease;
-}
-#newsErrorRetry:focus,
-#newsErrorRetry:hover {
-    text-shadow: 0px 0px 20px white;
-}
-#newsErrorRetry:active {
-    color: #c7c7c7;
-    text-shadow: 0px 0px 20px #c7c7c7;
 }
 
 /*******************************************************************************
@@ -2939,6 +2621,11 @@ input:checked + .toggleSwitchSlider:before {
     }
 }
 
+#serverStatus {
+    position: absolute;
+    margin: 16vw 0vw 0vw 2.5vw;
+    height: fit-content;
+}
 /* * *
 * Landing View (Bottom Styles) | Right Content
 * * */
@@ -3023,6 +2710,7 @@ input:checked + .toggleSwitchSlider:before {
     position: relative;
     display: flex;
     flex-direction: column;
+    gap: 1vw;
     margin-top: 2.5vw;
     height: calc(100% - 2.5vw);
     width: 8vw;
@@ -3034,6 +2722,7 @@ input:checked + .toggleSwitchSlider:before {
 #internalMedia, #externalMedia {
     display: flex;
     flex-direction: column;
+    gap: 0.5vw;
 }
 
 /* Container object which wraps an icon to ensure fluid transitions. */
@@ -3047,10 +2736,12 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Divider bar between the external and internal icons. */
 .mediaDivider {
+    display: flex;
+    justify-self: center;
+    align-self: center;
     height: 2px;
     width: 2.5vw;
     background: rgb(255, 255, 255);
-    margin: 1.2vw 0vw;
     opacity: 0.9;
 }
 
@@ -3078,7 +2769,6 @@ input:checked + .toggleSwitchSlider:before {
 /* Social media URL shared styles. */
 .mediaURL {
     outline: none;
-    color: rgba(0, 0, 0, 0);
 }
 
 
@@ -3097,22 +2787,25 @@ input:checked + .toggleSwitchSlider:before {
 }
 
 /* Settings tooltip styles. */
-.MediaTooltip {
+
+#SettingsTooltip {
     opacity: 0;
-    width: 75px;
-    height: 20px;
+    width: 7vw;
+    height: 2vw;
     background-color: rgba(0, 0, 0, 0.75);
     text-align: center;
-    border-radius: 4px;
+    border-radius: 5px;
     position: absolute;
-    z-index: 1;
-    right: 130%;
-    font-size: 12px;
-    line-height: 20px;
+    z-index: 1vw;
+    font-size: 1.2vw;
+    line-height: 2vw;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
+    right: 130%;
+    bottom:15%;
     
 }
-.MediaTooltip::after {
+
+#SettingsTooltip::after {
     content: " ";
     position: absolute;
     top: 50%;
@@ -3122,12 +2815,9 @@ input:checked + .toggleSwitchSlider:before {
     border-style: solid;
     border-color: transparent transparent transparent rgba(0, 0, 0, 0.75);
 }
-.mediaButton:hover .MediaTooltip,
-.mediaButton:focus .MediaTooltip,
-.mediaButton:active .MediaTooltip,
-.mediaURL:hover .MediaTooltip,
-.mediaURL:focus .MediaTooltip,
-.mediaURL:active .MediaTooltip {
+.mediaButton:hover #SettingsTooltip,
+.mediaButton:focus #SettingsTooltip,
+.mediaButton:active #SettingsTooltip {
     visibility: visible;
     opacity: 1;
     transition-delay:0.05s;
@@ -3135,7 +2825,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Discord icon colors. */
 #discordSVG:hover,
-#discordURL:focus #discordSVG {
+.mediaURL:focus #discordSVG {
     fill: #7288d9;
 }
 #discordSVG:active {
@@ -3151,9 +2841,13 @@ input:checked + .toggleSwitchSlider:before {
 /* Style for a general label on the bottom of the landing view. */
 .bot_label {
     font-size: 9px;
-    letter-spacing: 1px;
+    letter-spacing: 0.1vw;
     font-weight: bold;
     text-shadow: 0px 0px 0px #bebcbb;
+}
+
+#upper .bot_label {
+    font-size: 1.1vw;
 }
 
 /* Divider used on the bottom of the landing view. */
@@ -3169,186 +2863,14 @@ input:checked + .toggleSwitchSlider:before {
 * Landing View (Bottom Styles) | Left Content
 * * */
 
-/* Maintains maximum width on the status bar. */
-#server_status_wrapper {
-    display: inline-flex;
-    width: 75px;
-}
 
 /* Span which displays the player count of the selected server. */
 #player_count {
     color: #949494;
-    font-size: 8px;
+    font-size: 1vw;
     font-weight: 900;
     text-shadow: 0px 0px 20px #949494;
-    margin-left: 10px;
-}
-
-/* Wrapper container for the mojang status bar. */
-#mojangStatusWrapper {
-    position: relative;
-    display: flex;
-    cursor: pointer;
-}
-
-/* Icon which displays the status of the mojang services. */
-#mojang_status_icon {
-    font-size: 30px;
-    color: #848484;
-    margin-left: 15px;
-    font-family: 'sans-serif';
-}
-
-/* Tooltip which displays more details about the mojang statuses. */
-#mojangStatusTooltip {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    width: 145px;
-    min-height: 150px;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    border-radius: 4px;
-    padding: 5px 10px;
-    z-index: 1;
-    font-family: 'Avenir Medium';
-    font-size: 12px;
-    transition: visibility 0s linear 0.25s, opacity 0.25s ease;
-    bottom: calc(100% + 15px);
-    transform: translateX(-50%);
-    margin-left: 50%;
-    box-shadow: 0px 0px 20px rgb(0, 0, 0);
-    cursor: default;
-}
-#mojangStatusTooltip:after {
-    content: " ";
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
-}
-#mojangStatusWrapper:hover #mojangStatusTooltip {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0s;
-}
-
-/* Tooltip title for the mojang statuses. */
-#mojangStatusTooltipTitle {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
-}
-
-/* Wrapper container for the non essential services title. */
-#mojangStatusNEContainer {
-    display: flex;
-    align-items: center;
-    margin: 10px 0px;
-}
-
-/* White bar which surrounds the non essential service title. */
-.mojangStatusNEBar {
-    height: 1px;
-    width: 100%;
-    background: white;
-}
-
-/* Non essential service title text. */
-#mojangStatusNETitle {
-    font-size: 10px;
-    padding: 0px 3px;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-/* Wrapper container for mojang service information. */
-.mojangStatusContainer {
-    display: flex;
-}
-
-/* Displays the name of the mojang service. */
-.mojangStatusName {
-    width: 100%;
-    font-size: 10px;
-    letter-spacing: 1px;
-    line-height: 12px;
-    padding: 6px 0px;
-}
-
-/* Displays the status of the mojang service. */
-.mojangStatusIcon {
-    margin-right: 10px;
-    font-size: 18.5px;
-    color: #848484;
-}
-
-/* * *
-* Landing View (Bottom Styles) | Center Content
-* * */
-
-/* Button which opens the news view. */
-#newsButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}
-#newsButton:hover #newsButtonText,
-#newsButton:focus #newsButtonText {
-    text-shadow: 0px 0px 20px #fff, 0px 0px 20px #fff;
-}
-#newsButton:active {
-    color: #c7c7c7;
-    text-shadow: 0px 0px 20px #c7c7c7, 0px 0px 20px #c7c7c7;
-}
-
-#newsButton:hover #newsButtonSVG,
-#newsButton:focus #newsButtonSVG {
-    -webkit-filter: drop-shadow(0px 0px 2px #fff);
-}
-#newsButton:active #newsButtonSVG .arrowLine {
-    stroke: #c7c7c7;
-}
-#newsButton:active #newsButtonSVG {
-    -webkit-filter: drop-shadow(0px 0px 2px #c7c7c7);
-}
-#newsButton:disabled #newsButtonSVG .arrowLine {
-    stroke: rgba(255, 255, 255, 0.75);
-}
-
-/* Icon which indicates there is new news. */
-#newsButtonAlert {
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    border-radius: 50%;
-    background: red;
-    right: -1px;
-    top: 50%;
-}
-
-/* Arrow image which floats above the news button. */
-#newsButtonSVG {
-    height: 11px;
-    margin-left: -2px;
-    transition: 0.25s ease;
-}
-
-/* Span which contains the news button text. */
-#newsButtonText {
-    color: white;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-shadow: 0px 0px 0px #bebcbb;
-    font-size: 11px;
-    line-height: 30px;
-    display: flex;
-    transition: 0.25s ease;
+    margin-left: 0.5vw;
 }
 
 /* * *
@@ -3910,6 +3432,8 @@ input:checked + .toggleSwitchSlider:before {
 /* Stationary image for the spinner. */
 #loadCenterImage {
     position: absolute;
-    width: 277px;
+    width: 25vw;
     height: auto;
+    border-radius: 2vw;
+    /*amogus*/
 }
