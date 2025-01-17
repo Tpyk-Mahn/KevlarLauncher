@@ -2458,7 +2458,7 @@ input:checked + .toggleSwitchSlider:before {
     position: relative;
     transition: top 2s ease;
     top: 0px;
-    height: 77vh;
+    height: 77%;
     display: flex;
 }
 #landingContainer > #upper > #left {
@@ -2485,44 +2485,15 @@ input:checked + .toggleSwitchSlider:before {
     justify-content: center;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
-#landingContainer > #lower > #left {
-    position: relative;
-    transition: top 2s ease;
-    top: 0px;
-    height: 100%;
-    width: 33vw;
-    display: inline-flex;
-    justify-content: center;
-}
-#landingContainer > #lower > #left #content {
-    position: relative;
-    top: 25px;
-    display: inline-flex;
-    line-height: 24px;
-    left: 50px;
-}
-#landingContainer > #lower > #center {
-    position: relative;
-    transition: top 2s ease;
-    top: 0px;
-    height: 100%;
-    width: 34vw;
-    display: inline-flex;
-    justify-content: center;
-}
-#landingContainer > #lower > #center #content {
-    position: relative;
-    z-index: 500;
-    transition: top 2s ease;
-    top: 10px;
-}
+
 #landingContainer > #lower > #right {
     position: relative;
     transition: top 2s ease;
     top: 0px;
     height: 100%;
-    width: 33vw;
+    width: 60vw;
     display: inline-flex;
+    justify-content: center;
 }
 
 /*******************************************************************************
@@ -2850,13 +2821,17 @@ input:checked + .toggleSwitchSlider:before {
     font-size: 1.1vw;
 }
 
+#lower .bot_label {
+    font-size: 2vw;
+}
+
 /* Divider used on the bottom of the landing view. */
 .bot_divider {
-    height: 25px;
-    width: 2px;
-    background: rgba(107, 105, 105, 0.7);
-    margin-left: 20px;
-    margin-right: 20px;
+    height: 4vw;
+    width: 0.2vw;
+    background: rgba(255, 255, 255, 0.75);
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 /* * *
@@ -2880,8 +2855,9 @@ input:checked + .toggleSwitchSlider:before {
 /* Main launch content container. */
 #landingContainer > #lower > #right #launch_content {
     position: relative;
-    top: 25px;
+    top: 2vw;
     display: inline-flex;
+    width: fit-content;
 }
 
 /* The launch button. */
@@ -2890,9 +2866,9 @@ input:checked + .toggleSwitchSlider:before {
     border: none;
     cursor: pointer;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 0.1vw;
     text-shadow: 0px 0px 0px #bebcbb;
-    font-size: 20px;
+    font-size: 2vw;
     padding: 0px;
     transition: 0.25s ease;
     outline: none;
@@ -2914,24 +2890,25 @@ input:checked + .toggleSwitchSlider:before {
 /* Launch details main container, hidden until launch processing begins. */
 #launch_details {
     position: relative;
-    top: 25px;
+    top: 2vw;
     display: none;
+    width: fit-content;
 }
  
 /* Left side of launch details container, displays percentage and a divider. */
 #launch_details_left {
     display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* Span which displays percentage complete. */
 #launch_progress_label {
     font-weight: 900;
-    letter-spacing: 1px;
+    letter-spacing: 0.1vw;
     text-shadow: 0px 0px 0px #bebcbb;
-    font-size: 20px;
-    min-width: 53.21px;
-    max-width: 53.21px;
-    text-align: right;
+    font-size: 2vw;
+    text-align: center;
 }
 
 /* Right side of launch details container, displays progress bar and details. */
@@ -2939,6 +2916,7 @@ input:checked + .toggleSwitchSlider:before {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: fit-content;
 }
 
 /* Button which opens the server selection view. */
@@ -2950,6 +2928,7 @@ input:checked + .toggleSwitchSlider:before {
     line-height: 24px;
     padding: 0px;
     transition: 0.25s ease;
+
 }
 #server_selection_button:hover,
 #server_selection_button:focus {
@@ -2962,8 +2941,8 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Progress bar styles. */
 #launch_progress[value] {
-    height: 3px;
-    width: 265px;
+    height: 0.5vw;
+    width: 200px;
     -webkit-appearance: none;
 }
 #launch_progress[value]::-webkit-progress-bar {
@@ -2975,10 +2954,11 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Span which displays information about the status of the launch process. */
 #launch_details_text {
-    font-size: 11px;
+    font-size: 1vw;
+    width: fit-content;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /*******************************************************************************
@@ -3121,16 +3101,17 @@ input:checked + .toggleSwitchSlider:before {
     justify-content: center;
     align-items: center;
     height: 75%;
+    width : 40vw;
 }
 
 /* Server selection header. */
 #serverSelectHeader,
 #accountSelectHeader {
     font-family: 'Avenir Medium';
-    font-size: 20px;
+    font-size: 2.5vw;
     font-weight: bold;
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 2.5vw;
 }
 
 /* Wrapper div for the list of available servers. */
@@ -3142,13 +3123,17 @@ input:checked + .toggleSwitchSlider:before {
     justify-content: center;
     max-height: 65%;
     min-height: 40%;
+    width : 100%;
 }
 
 /* Scrollable div which lists the available servers. */
 #serverSelectListScrollable,
 #accountSelectListScrollable {
-    padding: 0px 5px;
+    display : flex;
+    justify-content: center;
     overflow-y: scroll;
+    width :100%;
+    height: fit-content;
 }
 #serverSelectListScrollable::-webkit-scrollbar,
 #accountSelectListScrollable::-webkit-scrollbar {
@@ -3168,8 +3153,9 @@ input:checked + .toggleSwitchSlider:before {
 .serverListing {
     border: none;
     padding: 0px;
-    width: 375px;
+    width: 100%;
     min-height: 60px;
+    height: fit-content;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -3239,8 +3225,9 @@ input:checked + .toggleSwitchSlider:before {
 .serverListingImg {
     margin: 0px 10px 0px 5px;
     border: 1px solid #fff;
-    height: 50px;
-    width: 50px;
+    border-radius: 0.2vw;
+    height: 6vw;
+    width: 6vw;
 }
 
 /* Content container for the server listing's details. */
@@ -3249,19 +3236,21 @@ input:checked + .toggleSwitchSlider:before {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    height: 50px;
+    gap: 0.2vw;
+    height: fit-content;
+    width: fit-content;
 }
 
 /* The name of the server listing. */
 .serverListingName {
-    font-size: 14px;
+    font-size: 1.4vw;
     font-weight: bold;
 }
 
 /* Description for the server listing. */
 .serverListingDescription {
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 1vw;
+    line-height: 1vw;
     font-weight: bold;
     text-align: left;
 }
@@ -3269,29 +3258,33 @@ input:checked + .toggleSwitchSlider:before {
 /* Content container for the server listing's information. */
 .serverListingInfo {
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: flex-start;
 }
 
 /* The minecraft version of the server listing. */
 .serverListingVersion {
-    font-size: 10px;
+    font-size: 1vw;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 12px;
-    height: 12px;
-    border-radius: 2px;
-    background: rgba(31, 140, 11, 0.8);
-    padding: 0px 2px;
+    line-height: 1.2vw;
+    height: 1.2vw;
+    border-radius: 0.2vw;
+    border-color: rgba(98, 149, 84, 0.75);
+    background: rgba(62, 113, 48, 0.75);
+    box-shadow: 0px 0px 1px 0px rgba(3, 6, 6, 0.75);
+    padding: 0vw 0.2vw;
 }
 
 /* The revision version of the server's manifest. */
 .serverListingRevision {
     color: #969696;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 1vw;
+    line-height: 1.2vw;
+    vertical-align: center;
     padding: 0px 5px;
 }
 
@@ -3300,21 +3293,21 @@ input:checked + .toggleSwitchSlider:before {
     display: flex;
     align-items: center;
     cursor: pointer;
-    height: 12px;
+    height: 1.5vw;
     position: relative;
 }
 /* Tooltip which displays when hovering over the star. */
 .serverListingStarTooltip {
     visibility: hidden;
     opacity: 0;
-    width: 65px;
+    width: 6.5vw;
     background-color: rgba(0, 0, 0, 0.40);
     text-align: center;
     border-radius: 4px;
     position: absolute;
     z-index: 1;
     left: 130%;
-    font-size: 10px;
+    font-size: 1vw;
     transition: visibility 0s linear 0.25s, opacity 0.25s ease;
 }
 .serverListingStarTooltip::after {
@@ -3340,18 +3333,19 @@ input:checked + .toggleSwitchSlider:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 2.5vw;
 }
 
 /* Server selection confirm button styles. */
 #serverSelectConfirm,
 #accountSelectConfirm {
     background: none;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     color: white;
     font-family: 'Avenir Medium';
     font-weight: bold;
-    border-radius: 2px;
+    font-size: 2vw;
+    border-radius: 0.4vw;
     padding: 0px 8.1px;
     cursor: pointer;
     transition: 0.25s ease;
@@ -3374,9 +3368,9 @@ input:checked + .toggleSwitchSlider:before {
 #serverSelectCancel,
 #accountSelectCancel {
     font-weight: bold;
-    font-size: 10px;
+    font-size: 1.5vw;
     text-decoration: none;
-    padding-top: 2.5px;
+    padding-top: 0.3vw;
     color: rgba(202, 202, 202, 0.75);
     transition: 0.25s ease;
     background: none;
